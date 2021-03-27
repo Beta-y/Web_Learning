@@ -1,0 +1,351 @@
+<!--
+ * @Author: Beta-y
+ * @Date: 2021-03-23 16:17:56
+ * @LastEditTime: 2021-03-27 20:04:58
+ * @Description: None
+-->
+<!-- Shift + Alt + A 添加行尾注释 -->
+<!-- Ctrl + / 注释整行 -->
+<!-- 输入 ! 可自动生成文档结构 -->
+<!-- tag名 * 数量 可以批量生成标签，比如 br*3 -->
+
+<!DOCTYPE html> <!-- 声明本文件的文档标签以 HTML5规范 进行解析， -->
+<html>
+    <!-- 头部，网页属性相关设置，可以省略 -->
+    <head>
+        <!-- meta：元，用于完成对应设置 -->
+        <meta name="keywords" content=""><!-- 网页关键字 -->
+        <meta name="description" content=""><!-- 网页描述内容 -->
+        <meta charset="UTF-8"><!-- 编码形式，中文 -->
+        <title>基本标签</title><!-- 网页标签页的名字 -->
+        <!-- 网页图标   -->
+        <link rel="shortcut icon" href="https://files-cdn.cnblogs.com/files/beta-1999/icon.bmp" type="image/bmp">
+        <!-- 手写样式表 -->
+        <style></style>
+        <!-- 引入外部层叠样式表 -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <!-- 主体，网页正文 -->
+    <body>
+        <!-- (1) div：division，段间布局分层。没有具体含义，会单独成段，区别于 (8) <span> 标签的行内布局 -->
+        <div>
+            <!-- (2) h*：headline，标题。从 h1~h6 -->
+            <h1 align="center">
+                HTML 学习
+            </h1>
+        </div>
+
+        <!-- (3) p：paragraph，段落。包含一段文字，仅在 </p> 后产生回车 -->
+        <p >
+            不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车
+            不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车
+            不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车不回车
+        </p>
+
+        <!-- (4) br，break，换行符。单标签，常多写一个 / 来闭合标签 -->
+        <br/>
+
+        <!-- (5) hr，horizontal rule，分割线。单标签，默认居中-->
+        <hr width="50%"/>
+        <hr width="50%" align="left" color="red"/>
+
+        <!-- (6) a，anchor，超链接。target:打开链接的方式，_blank/_parent/_self/_top -->
+        <a href="http://baidu.com" title="提示：百度" target="_blank"> 跳转百度 </a>
+        <br/>
+
+        <!-- (7) img，image，图像。src:source，资源; alt:alternate text，替代文本，用于图片失效时使用 -->
+        <img src="https://files-cdn.cnblogs.com/files/beta-1999/logo2.bmp" alt="个人LOGO" title="提示：LOGO">
+        <br/>
+
+        <!-- (8) span，行内布局，区别于 （1）<div> 的段间布局 -->
+        <span> span1 </span>
+        <span> span2 </span>
+        <div> div1 </div>
+        <div> div2 </div>
+
+        <!-- （9）ul/ol + li，unordered/ordered list + list，无序/有序列表 + 列表项。 -->
+        <!-- 无序列表 -->
+        <ul><!-- Emmet语法：ul>li{unordered list $}*3 -->
+            <li>unordered list 1</li>
+            <li>unordered list 2</li>
+            <li>unordered list 3</li>
+        </ul>
+        <!-- 有序列表 -->
+        <ol><!-- Emmet语法：ol>li{ordered list $}*3 -->
+            <li>ordered list 1</li>
+            <li>ordered list 2</li>
+            <li>ordered list 3</li>
+        </ol>
+        <!-- 嵌套列表 -->
+        <ul><!-- Emmet语法：ul>li{unordered list $}*3 -->
+            <li>1
+                <ul>
+                    <li>1.1</li>
+                </ul>
+            </li>
+            <li>2
+                <ul>
+                    <li>2.1</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- (10) b & strong，加粗(bold) vs 加粗且强调。行内标签，不换行-->
+        <b>加粗</b>
+        <strong>加粗且强调</strong>
+
+        <!-- (11) i & em， 斜体（italic） vs 加粗且强调(emphasis)。行内标签，不换行-->
+        <i>斜体</i>
+        <em>斜体且强调</em>
+
+        <!-- (12) pre，预格式化文本(preformatted text)。 块级标签（独占一行），保留换行和空格，文字字号会较正常字体小一号-->
+        <pre>这句话保留了
+        换行和  空格</pre>
+
+        <!-- (13) small & big。行级标签（不换行且不识别宽高），字号缩小一号 & 放大一号，其中 big 已经在 HTML5 中被淘汰，虽然目前仍然支持，但不建议用 -->
+        <!-- 浏览器默认支持的最小字号为 12px，若需要更小的字号则要利用 CSS 实现 -->
+        <small>小一号的字</small>
+        <big>大一号的字</big>
+        <p>正常的字</p>
+
+        <!-- (14) sub & sup，上下标(subscript & superscript)，直接对文本用标签修饰可以减少样式表二次修饰的渲染压力 -->
+        正常公式：X2+Y2=R2                                      <br/>
+        下标公式：X<sub>2</sub>+Y<sub>2</sub>=R<sub>2</sub>     <br/>
+        上标公式：X<sup>2</sup>+Y<sup>2</sup>=R<sup>2</sup>     <br/>
+
+        <!-- (15) 实体转义符号：避免与 HTML 标识符混淆 -->
+        <ul>
+            <li>大于 (greater than)：&gt;</li>
+            <li>小于 (less than)：&lt;</li>
+            <li>与 (ampersand)：&amp;</li>
+            <li>除 (divide)：&divide;</li>
+            <li>乘 (times)：&times;</li>
+            <li>版权 (copy)：&copy;</li>
+            <li>普通空格 (non-breaking space)：空&nbsp;格</li>
+            <li>半角空格 (en space)：空&ensp;格</li>
+            <li>全角空格 (em space)：空&emsp;格</li>
+            <li><a href="https://tool.oschina.net/commons?type=2" title="实体转义符">HTML 转义字符大全</a></li>
+        </ul>
+
+        <!-- (16)
+            块级元素：独占一行，宽高可控，默认铺满整行，其内部可包含块级&行级元素
+            行级元素(内联元素)：不可独占一行，宽高不可控，其内部仅可包含行级元素
+            块级 -> 行级：添加属性 display:inline
+            行级 -> 块级：添加属性 display:block
+        -->
+        <p style="background:gray;height:40px;display:inline;">行级 p 标签</p>
+        <p style="background:gray;height:40px;" >块级 p 标签</p>
+        <span style="background:gray;height:40px;" >行级 span 标签</span>
+        <span style="background:gray;height:40px;display:block;">块级 span 标签</span>
+
+        <!-- (17) 标签通用属性 -->
+        <ul>
+            <li>标签通用属性</li>
+            <ul>
+                <li>id：为某一标签分配名称，一个网页内不能重复</li>
+                <li>class：为标签分配类名</li>
+                <li>style：设置当前标签行内样式</li>
+                <li>title：设置标签鼠标悬浮提示内容</li>
+            </ul>
+        </ul>
+        <p id="p1" class="paragraph" style="color:pink;width:50px;border:2px solid #fff" title="复杂 p 标签">段落1</p>
+    </body>
+
+    <!-- (18) table，表格-->
+    <!-- Emmet语法：table[border=4 width=300]>tr>th{表头$}*3-->
+    <!-- table属性
+        border：表格边框，默认单位px
+        width：表格宽度， px
+        cellpadding：单元格文本与边框 上、下、左 的距离，px
+        cellspacing：单元格边框的间距，px
+        align：表格排列方式，默认left
+    -->
+    <!-- tr/th/td属性
+        rowspan；跨行数
+        colspan：跨列数
+        align：水平布局，center,left,right
+        valign：垂直布局，middle,top,bottom
+    -->
+    <table border="4" width="300" cellpadding="10" cellspacing="10">
+        <tr><!-- 行 -->
+            <th>表头1</th><!-- 表头单元格，自带加粗和居中 -->
+            <th>表头2</th>
+            <th>表头3</th>
+        </tr>
+        <tr>
+            <td rowspan="2" align="center" valign="middle">内容1</td><!-- 列 -->
+            <td>内容2</td>
+            <td>内容3</td>
+        </tr>
+        <tr>
+            <td>内容2</td>
+            <td>内容3</td>
+        </tr>
+    </table>
+    <!-- 完整表格 包含4部分： caption（标题）thead（表头）tbody（表体）tfoot（表尾） -->
+    <!-- table[border=1 width=300]>(caption{学生信息表})+(thead>tr>th*3)+(tbody>tr*2>td*3)+(tfoot>tr>td[colspan=3 align=right]) -->
+    <table border="1" width="300">
+        <caption>学生信息表</caption><!-- 标题 -->
+        <thead><!-- 表头 -->
+            <tr><!-- 行 -->
+                <th>学号</th><!-- 表头单元格 -->
+                <th>姓名</th>
+                <th>备注</th>
+            </tr>
+        </thead>
+        <tbody><!-- 表体 -->
+            <tr>
+                <td>001</td><!-- 列 -->
+                <td>小明</td>
+                <td>挺好</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>小红</td>
+                <td>不错</td>
+            </tr>
+        </tbody>
+        <tfoot><!-- 表尾 -->
+            <tr>
+                <td colspan="3" align="right">附：该表不可变更</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- (19) form：表单标签，用于实现前后端交互 -->
+    <!-- 常用属性 -->
+    <!--
+        name：表单名称
+        action：表单数据提交的地方(通常为一个网址或者后台文件名(.jsp/.php/.asp/.aspx/.py等))
+        method：提交数据的方式，主要有：get 和 post，默认为 post
+    -->
+
+    <!-- (20) 表单元素，需要用 form 包裹 -->
+        <!-- input 类：主要用来输入、选择或者发出指令
+            type="text / password / radio / checkbox / file / button / image / submit / reset"
+                label：提示性文本
+                text：单行文本输入框。input的type默认值，可以不写
+                      属性： name(命名) / placeholder(提示) / value(初始值)
+                            / minlength & maxlength(字符长度) / disabled(失能)
+                            / readonly(只读) / pattern(正则匹配)
+                password：密码框。
+                      属性：与 text 相同
+                radio：单选钮，通常为两个以上。
+                      属性：name(必须要有,带相同name的才能互斥) / value
+                           / checked(选中，用于设置默认值，作用与同组最后一个checked处)
+                           / disabled(失能) / readonly
+                checkbox：复选框，通常为两个以上
+                      属性：基本与 radio 相同，例外：checked(选中，用于设置默认值，作用于多个checked处)
+                file：文件上传按钮
+                button：普通按钮
+                      属性：没有name，常用 value(显示文本) / disabled(失能)
+                image：图片按钮（提交按钮）
+                      属性：没有name，常用 src(图片链接，相当于 value) / disabled / title(悬浮提示字)
+                submit：提交按钮，将表单数据提交到后台(即 form 的 action 属性所指示的位置)
+                reset：重置按钮，将表单内所有组件输入的内容重置为默认值
+        -->
+            <!-- text 文本输入-->
+            <form action="">
+                <!-- type 默认为 text，value设置默认值 -->
+                <input value=10086 disabled>             <br/>
+                <!-- 提示字 + 正则匹配-->
+                <input type="text" placeholder="提示：请输入3位数字" pattern="[0-9]{3}">  <br/>
+                <!-- 限制输入长度 -->
+                <input type="text" placeholder="限制长度为5" maxlength="5">   <br/>
+                <!-- readonly 只读 -->
+                <input type="text" value=10086 readonly>  <br/>
+                <br/><br/>
+
+            <!-- password 密码输入(暗文) -->
+                <input type="password">
+                <br/><br/>
+
+            <!-- radio：单选钮 -->
+                <input type="radio" name="sex" checked> 男
+                <input type="radio" name="sex"> 女
+                <input type="radio" name="num" checked> 1 <!-- checked 受下一组影响而失效 -->
+                <input type="radio" name="num" checked> 2
+                <br/><br/>
+
+            <!-- checkbox：复选框 -->
+                <input type="checkbox" name="hoby" checked> 听音乐
+                <input type="checkbox" name="hoby" checked> 码代码
+                <input type="checkbox" name="hoby" checked> 机车啦
+                <br/><br/>
+
+            <!-- file：文件上传按钮 -->
+                <input type="file">
+                <br/><br/>
+
+            <!-- button：普通按钮 -->
+                <input type="button" value="登录" >
+                <input type="button" value="注销" disabled>
+                <br/><br/>
+
+            <!-- image：图片按钮（提交按钮） -->
+                <input type="image" src="https://icon.bmp" title="刷新按钮">
+                <br/><br/>
+
+            <!-- submit：提交按钮 -->
+                <input type="submit" title="提示：刷新">
+
+            <!-- reset：提交按钮 -->
+                <input type="reset"  value="重置按钮">
+
+            </form>
+            <br/>
+        <!-- textarea 类：多行文本宽
+            常用属性：name / id / cols / rows / placeholder(文本提示)
+                     / minlength & maxlength / required(表必须输入)
+                     /value(用于获取文本输入内容)
+        -->
+        <form action="">
+            <textarea name="" id="" cols="30" rows="10" placeholder="请输入内容"></textarea>
+        </form>
+
+        <!-- select 类：下拉列表框，默认用于单项选择，行级元素
+            属性：id / multiple(开启多选，此时称作列表框)， / size(列表框展示行数)
+            使用 <option> 标签给出选项
+        -->
+        <form action="">
+            <!-- label 标签：主要用于展示提示性文本
+                属性：for，用于关联被解释的 input 组件，填 id 号
+            -->
+            <label for="sex">性别：</label>
+            <select name="" id="sex">
+                <option value="male">男</option>
+                <option value="female">女</option>
+            </select>
+            <br/><br/>
+
+            <!-- multiple(开启多选，此时称作列表框)， / size(列表框展示行数) -->
+            <label for="course" >课程：</label>
+            <select name="" id="course" multiple size="2">
+                <option value="1">语文</option>
+                <option value="2">数学</option>
+                <option value="2">英语</option>
+                <option value="2">其他</option>
+            </select>
+        </form>
+
+        <!-- button 类 -->
+            <!-- 可不写在 form 标签中；若写在 form 中则具有提交功能 -->
+            <button id="">普通按钮</button><!-- 主要用于调用 js 代码 -->
+            <form action="">
+                <button>提交按钮</button><!-- 这里的 button 与 input 中的 submit 按钮功能一样 -->
+            </form>
+
+    <!-- (21) iframe: 框架集。用于将多个网页合并在一个网页 -->
+            <!-- 常用属性：
+                 name：框架名
+                 src：引入的外部 HTML 文件
+                 scrolling：滚动条(yes/no/auto)
+                 width & height：宽度/高度(% 或 px)
+                 frameborder：是否有边框(1/0)
+                 marginheight：框架离顶端和低端的距离(% 或 px)
+                 marginwidth： 框架离左端和右端的距离(% 或 px)
+            -->
+            <!-- 在实际开发中尽量减少使用 iframe，因为它破坏了前进和后退功能(用的是超链接)，且不利于网页内容抓取(分布式) -->
+    <!-- 脚本，可用于处理本页面的简单逻辑运算 -->
+    <script></script>
+</html>

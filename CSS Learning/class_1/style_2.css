@@ -1,0 +1,6 @@
+/* new_box: 类名，需要在前面加一个.符号 */
+.new_box { 
+    font-size: 50px;
+    color: rgba(192, 223, 54, 0.5);
+    display:block; /* 行级元素 -> 块级元素 */
+}

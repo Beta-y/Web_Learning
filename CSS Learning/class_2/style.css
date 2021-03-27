@@ -1,0 +1,28 @@
+/* 全匹配选择器 */
+
+/*
+* { /* *符号 */
+    color:brown;
+}
+*/
+
+
+/* 标签选择器 */
+p { /* 标签名 */
+    color:blueviolet;
+}
+
+/* 类选择器 */
+.box_1 { /* .类名 */
+    color:cornflowerblue;
+}
+
+/* id 选择器 */
+#content { /* #id名 */
+    color:darkgreen;
+}
+
+/* 派生选择器 */
+.box_2 li{ /* .类名 标签名 */
+    color:fuchsia;
+}
